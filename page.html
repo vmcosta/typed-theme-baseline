@@ -1,6 +1,6 @@
 {% extends 'partials/base.html' %}
-  {% block content %}
-    {{ super() }}
-    <h2 id="content">{{ page.title }}</h2>
-    {{ page.content }}
-  {% endblock content %}
+{% block content %}
+	{{ super() }}
+	<h2>{{ page.title }}</h2>
+	{{ page.content }}
+{% endblock content %}
