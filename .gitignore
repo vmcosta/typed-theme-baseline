@@ -1,7 +1,3 @@
-# Sass
-sass/*
-!sass/.*
-
 # OS Generated
 .DS_Store*
 ehthumbs.db
