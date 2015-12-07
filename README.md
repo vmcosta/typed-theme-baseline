@@ -1,4 +1,4 @@
-# Typed Theme
+# Baseline Typed Theme
 
 These are all open source theme for Typed. For more information on building and modifying themes for Typed, please see the [themes SDK docs](https://www.typed.com/docs/themes/latest).
 
