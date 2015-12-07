@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<!-- baseline v1.0.0 | (c) weaverthemes.com | MIT licensed -->
+<html>
+	<head>
+		<title>{{ meta.title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="{{ meta.description }}">
+		<link rel="stylesheet" href="{% asset 'css/main.css' %}">
+		<link rel="alternate" href="{{ site.feed_url }}" title="{{ site.title }}" type="application/rss+xml">
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700' rel='stylesheet' type='text/css'>
+		{{ site.code_head }}
+	</head>
+	<body>
+
+		{% block top %}
+			{% include 'partials/header.html' %}
+			{% include 'partials/navigation.html' %}
+			{% include 'partials/banner.html' %}
+		{% endblock top %}
+
+		<!-- Main -->
+		<div id="main" class="container">
+			{% block content %}{% endblock content %}
+		</div>
+
+      	{% include 'partials/footer.html' %}
+		{{ site.code_body }}
+		<!-- Scripts -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="{% asset 'js/skel.min.js' %}"></script>
+		<script src="{% asset 'js/jquery.fitvids.js' %}"></script>
+		<script src="{% asset 'js/main.js' %}"></script>
+		<script>
+			$(document).ready(function(){
+				$("#main").fitVids();
+		  	});
+		</script>
+	</body>
+</html>
