@@ -8,5 +8,4 @@ Thumbs.db
 #Misc
 config.codekit
 codekit.cache
-**/.sass-cache
-**/.sass-cache/*
+assets/sass/*
