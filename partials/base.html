@@ -27,14 +27,8 @@
       	{% include 'partials/footer.html' %}
 		{{ site.code_body }}
 		<!-- Scripts -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script src="{% asset 'js/skel.min.js' %}"></script>
-		<script src="{% asset 'js/jquery.fitvids.js' %}"></script>
+		<script src="{% asset 'js/jquery.min.js' %}"></script>
 		<script src="{% asset 'js/main.js' %}"></script>
-		<script>
-			$(document).ready(function(){
-				$("#main").fitVids();
-		  	});
-		</script>
 	</body>
 </html>
