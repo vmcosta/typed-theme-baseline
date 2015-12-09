@@ -1,6 +1,9 @@
 {% extends 'partials/base.html' %}
 {% block content %}
 	{{ super() }}
+  	{% if post.images %}
+    	<img src="{{ post.images[0].url }}" class="image fit">
+  	{% endif %}
 	<h2>{{ page.title }}</h2>
 	{{ page.content }}
 {% endblock content %}
