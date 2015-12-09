@@ -6,9 +6,6 @@
     {% block content %}
         {{ super() }}
         <article>
-            {% if post.images %}
-              <img src="{{ post.images[0].url }}" class="image fit">
-            {% endif %}
             <header>
                 <h2>{{ post.title }}</h2>
                 <p>
@@ -17,6 +14,9 @@
                 </p>
             </header>
           <div class="content">
+              {% if post.images %}
+                <img src="{{ post.images[0].url }}" class="image fit">
+              {% endif %}
               {{ post.content }}
           {% for author in post.authors %}
               <div class="bio-wrapper">
