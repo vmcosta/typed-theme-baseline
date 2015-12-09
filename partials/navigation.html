@@ -1,10 +1,10 @@
-<!-- Nav -->
+<!-- nav -->
 {% if site.navigation %}
-	<nav id="nav">
-		<ul class="links">
-			{% for item in site.navigation %}
-				<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-			{% endfor %}
-		</ul>
-	</nav>
+<nav id="nav">
+	<ul class="links">
+	{% for item in site.navigation %}
+		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+	{% endfor %}
+	</ul>
+</nav>
 {% endif %}

@@ -1,39 +1,39 @@
 {% extends "partials/base.html" %}
 {% block top %}
-  {% include 'partials/header.html' %}
-  {% include 'partials/navigation.html' %}
+    {% include 'partials/header.html' %}
+    {% include 'partials/navigation.html' %}
 {% endblock top %}
-    {% block content %}
-        {{ super() }}
-        <article>
-            <header>
-                <h2>{{ post.title }}</h2>
-                <p>
-                  <time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date }}</time>
-                  {{ post.tags|tags(last_separator=' and ', prefix=' in ') }}
-                </p>
-            </header>
-          <div class="content">
-              {% if post.images %}
-                <img src="{{ post.images[0].url }}" class="image fit">
-              {% endif %}
-              {{ post.content }}
-          {% for author in post.authors %}
-              <div class="bio-wrapper">
-                  <div class="row">
-                      <div class="3u 12u$(medium)">
-                          <span>
-                              <img src="{{ author.avatar }}" alt="{{ author.name }}" width=110 height=110 />
-                          </span>
-                      </div>
-                      <div class="author 9u$ 12u$(medium)">
-                          <h3>{{ author.name }}</h3>
-                          <p>{{ author.bio }}</p>
-                      </div>
-                  </div>
-          {% endfor %}
-              </div>
-          </div>
-          {{ site.code_post }}
-        </article>
+{% block content %}
+    {{ super() }}
+    <article>
+        <header>
+            <h2>{{ post.title }}</h2>
+            <p>
+                <time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date }}</time>
+                {{ post.tags|tags(last_separator=' and ', prefix=' in ') }}
+            </p>
+        </header>
+        <div class="content">
+        {% if post.images %}
+            <img src="{{ post.images[0].url }}" class="image fit">
+        {% endif %}
+            {{ post.content }}
+            {% for author in post.authors %}
+            <div class="bio-wrapper">
+                <div class="row">
+                    <div class="3u 12u$(medium)">
+                        <span>
+                            <img src="{{ author.avatar }}" alt="{{ author.name }}" width=110 height=110 />
+                        </span>
+                    </div>
+                    <div class="author 9u$ 12u$(medium)">
+                        <h3>{{ author.name }}</h3>
+                        <p>{{ author.bio }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        {{ site.code_post }}
+    </article>
 {% endblock content %}
