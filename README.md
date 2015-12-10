@@ -7,6 +7,9 @@ This is an open source theme for [Typed](http://typed.com). For more information
 How to Install:
 Compress the "theme" folder and upload the "theme.zip" file in the "Themes" tab under "Settings" on Typed.com.
 
+Online Demo:
+[http://baseline.typed.com](http://baseline.typed.com)
+
 Enjoy.
 
 There is No Copyright on this theme. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. See the `LICENSE` file for full details.
