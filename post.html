@@ -3,6 +3,10 @@
     {% include 'partials/header.html' %}
     {% include 'partials/navigation.html' %}
 {% endblock top %}
+{% block banner %}
+    <!-- banner -->
+    <section id="banner" style="background: url('{{ post.images[0].url }}') no-repeat; background-size: cover; background-position: center center; padding: 13.5em 0"></section>
+{% endblock banner %}
 {% block content %}
     {{ super() }}
     <article>
@@ -15,9 +19,6 @@
             </p>
         </header>
         <div class="content">
-        {% if post.images %}
-            <img src="{{ post.images[0].url }}" class="image fit">
-        {% endif %}
             {{ post.content }}
             {% for author in post.authors %}
             <div class="bio-wrapper">
