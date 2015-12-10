@@ -11,6 +11,7 @@
             <p>
                 <time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date }}</time>
                 {{ post.tags|tags(last_separator=' and ', prefix=' in ') }}
+                {{ post.authors|authors(last_separator=' and ', prefix='by ') }}
             </p>
         </header>
         <div class="content">

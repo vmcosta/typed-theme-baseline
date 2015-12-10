@@ -15,6 +15,7 @@
         <p class="entry-meta">
             Published on <time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date('%-d %B %Y') }}</time>
             {{ post.tags|tags(last_separator=' and ', prefix=' under ') }}
+            {{ post.authors|authors(last_separator=' and ', prefix='by ') }}
         </p>
     </article>
     {% else %}
