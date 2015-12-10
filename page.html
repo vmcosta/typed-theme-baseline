@@ -1,9 +1,16 @@
 {% extends 'partials/base.html' %}
+{% block top %}
+    {% include 'partials/header.html' %}
+    {% include 'partials/navigation.html' %}
+{% endblock top %}
+{% block banner %}
+    <!-- banner -->
+    {% if page.images %}
+        <section id="banner" style="background: #000 url('{{ page.images[0].url }}') no-repeat; background-size: cover; background-position: center center; padding: 13.5em 0;"></section>
+    {% endif %}
+{% endblock banner %}
 {% block content %}
 	{{ super() }}
 	<h2>{{ page.title }}</h2>
-  	{% if page.images %}
-    	<img src="{{ page.images[0].url }}" class="image fit">
-  	{% endif %}	
 	{{ page.content }}
 {% endblock content %}
